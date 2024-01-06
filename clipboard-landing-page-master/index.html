@@ -14,7 +14,7 @@
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <title>Frontend Mentor | Clipboard landing page</title>
     <style>
-      * {
+       * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
@@ -32,7 +32,7 @@
       header {
         background: url(images/bg-header-desktop.png) no-repeat fixed right top;
         padding-top: 100px;
-        height: 90vh;
+        /* height: 90vh; */
         text-align: center;
       }
       .logo {
@@ -43,7 +43,7 @@
         width: 600px;
         margin: auto;
       }
-      .content p {
+      .content >p {
         padding: 15px;
         margin: auto;
         width: 500px;
@@ -52,8 +52,8 @@
         text-decoration: none;
         color: var(--grey);
       }
-      .btn {
-        color: white;
+      .btn { 
+         color: white;
         margin-top: 40px;
       }
       .btn-1, .btn-2 {
@@ -73,68 +73,211 @@
       }
       .snippets {
         /* background: url(images/bg-header-desktop.png) no-repeat fixed right top; */
-        padding-top: 100px;
-        height: 90vh;
+        padding-top: 200px;
+        /* height: 50vh; */
         text-align: center;
         font-size: 20px;
       }
-      .snippets 
-      .image {
-        float: left; 
-        padding: auto;
-        margin: auto;
+      .left {
         display: flex;
+      }
+      .snippets .image {
+        display: block;
+        height: auto;
+        width: 105%;
+        transform: translateX(-5%);
       }
       .right {
         padding: 35px;
-        width: initial;
+        width: initial; 
         display: block;
         text-align: center;
         text-align: center;
 
       }
+      .right h1{
+        color: var(--black);
+        padding: 25px;
+        font-size: 30px;
+      }
+      .right >p{
+        color: var(--grey);
+        padding: 18px;
+        font-size: 25px;
+      }
       .group {
-        float: right;
-        width: 40vw;
+        /* float: right; */
+         width: 40vw;
+    
 
       }
       .card {
         padding: 40px;
+
       }
       .card h3{
         padding: initial;
       }
      .access {
         padding-top: 100px;
-        height: 90vh;
+        /* height: 90vh; */
         text-align: center;
       } 
+      .simple h1{
+        color: var(--black);
+        padding: 12px;
+        font-size: 30px;
+
+
+      }
+      .simple >p{
+        color: var(--grey);
+        padding: 12px;
+        font-size: 20px;
+      }
       .snippets h3 {
         columns: var(--grey);
 
       }
       .access {
         padding-top: 100px;
-        height: 90vh;
+        /* height: 90vh; */
         text-align: center;
         font-size: 20px;
       }
      .access .simple {
-        padding-top: 32px;
+        padding-top: 58px;
         display: contents;
         margin-top: 32px;
+
+      } 
+      .image-box {
+      padding: 25px;
       }
-
-
-
-
-
+     
+      .tools {
+        padding-top: 100px;
+        text-align: center;
+        /* font-size: 20px; */
+      }
+      .tools h3{
+        padding: 35px;
+      }
+      .tools-inner {
+        padding: 32px;
+        } 
+        .tools-inner h3{
+        color: var(--black);
+        font-size: 30px;
+        } 
+        .tools-inner >p{
+        color: var(--grey);
+        font-size: 18px;
+        } 
         
 
+      .create{
+        padding: 32px;
+        display: flex;
+        gap: 3px; 
 
-       
+      }
+
+      .create-inner h3{
+        color: var(--black);
+        font-size: 30px;
+        
+
+      }
+      .create-inner >p{
+        color: var(--grey);
+        font-size: 25px;
+  
+  
+
+      }
+      .svg {
+        padding-top: 100px;
+        text-align: center;
+        font-size: 20px;
+      }
+      .svg-inner{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 45px;
+       gap: 8rem;
+
+      }
+      .free{
+        padding-top: 200px;
+        text-align: center;
+        font-size: 20px;
+
+      }
+      .free-inner h1 {
+        color: var(--black);
+        font-size:35px;
+        padding: 15px;
+        width: 600px;
+        margin: auto;
+      }
+      .free-inner >p {
+        color: var(--grey);
+        font-size: 18px;
+        padding: 15px;
+        margin: auto;
+        width: 600px;
+      }
+    
+      .small {
+        float: left;
+
+       /* justify-content: center; */
+       align-content: center;
+      
+  
+      }
+      /* .privacy {
+        flex-wrap: wrap;
+        width: 60%;
+      } */
+  
+      .small-inner {
+         display: flex;
+         margin: auto;
+         padding: 40px;
+        font-weight: bolder;
+        gap: 3rem;
+        flex-wrap: wrap;
+        width: 50%;
+        
+      }
+      .social {
+        padding-top: 100px;
+        text-align: center;
+        display: flex;
+        font-size: 30px;
+        float: right ;
+        gap: 2rem;
+         
+
+      }
+  
+
+      
+
+      
       
     
+
+
+      
+
+
+
+    
+      
 
     
 
@@ -207,21 +350,75 @@
            snippets in a few simple clicks.
            </p>
            </div>
-        
-     
-        <div class="image box">
+          <div class="image-box">
           <img src="images/image-devices.png" alt="">
         </div>
           </section> 
 
-          <section>
-            <div>
+          <section class="tools">
+            <div class="tools-inner">
              <h3>Supercharge your workflow</h3>
               <p> we’ve got the tools to boost your productivity.</p>
-
             </div>
+            <div class="create">
+            <div class="create-inner">
+              <img src="images/icon-blacklist.svg" alt="">
+              <h3>Create blacklists</h3>
+              <p>Ensure sensitive information never makes its way to your clipboard by excluding certain sources.
+              </p>
+            </div>
+            <div class="create-inner">
+              <img src="images/icon-text.svg" alt="">
+              <h3>Plain text snippets</h3>
+              <p>Remove unwanted formatting from copied text for a consistent look.</p>
+            </div>
+            <div class="create-inner">
+              <img src="images/icon-preview.svg" alt="">
+              <h3>Sneak preview</h3>
+              <p>Quick preview of all snippets on your Clipboard for easy axxess</p>
+            </div>
+           </div>
+     </section>
+     <section class="svg">
+      <div class="svg-inner">
+        <div class="inner"><img src="images/logo-google.png" alt=""></div>
+        <div class="inner"><img src="images/logo-ibm.png" alt=""></div>
+        <div class="inner"><img src="images/logo-microsoft.png" alt=""></div>
+        <div class="inner"><img src="images/logo-hp.png" alt=""></div>
+        <div class="inner"><img src="images/logo-vector-graphics.png" alt=""></div>
+      </div>
+     </section>
 
-          </section>
+     <section class="free">
+      <div class="free-inner">
+        <h3>Clipboard for iOS and Mac OS</h3>
+        <p>Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
+          and you’re ready to start adding to your clipboard.</p>
+      </div>
+      <div class="btn">
+        <a href="" class="btn-1">Download for iOS</a>
+        <a href="" class="btn-2">Download for Mac</a>
+      </div>
+     </section>
+     <section>
+      <!-- <div class="privacy"> -->
+        <div class="small"> <img src="images/logo.svg" width="50" height="50"></div>
+         <div class="small-inner">  
+              <div>FAQs</div>
+              <div>Contact Us </div>
+              <div>Privacy Policy</div>
+              <div>Press Kit</div>
+            </div>
+            <!-- </div> -->
+        
+          <div class="social">
+            <div class="media"><img src="images/icon-facebook.svg" alt=""></div>
+            <div class="media"><img src="images/icon-twitter.svg" alt=""></div>
+            <div class="media"><img src="images/icon-instagram.svg" alt=""></div>
+          </div>
+
+    
+    </section>
   </body>
   </head>
 </html>
