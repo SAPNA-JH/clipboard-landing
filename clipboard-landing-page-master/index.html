@@ -3,291 +3,275 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
     <title>Frontend Mentor | Clipboard landing page</title>
-    <style>
-       * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-      }
-      :root {
-        --Cyan: hsl(171, 66%, 44%);
-        --Blue: hsl(233, 100%, 69%);
-        --grey: hsl(210, 10%, 33%);
-        --black: hsl(201, 11%, 6%);
-      }
-      body {
-        font-size: 15px;
-      }
-      header {
-        background: url(images/bg-header-desktop.png) no-repeat fixed right top;
-        padding-top: 100px;
-        /* height: 90vh; */
-        text-align: center;
-      }
-      .logo {
-        padding: 15px;
-      }
-      .content h1 {
-        padding: 15px;
-        width: 600px;
-        margin: auto;
-      }
-      .content >p {
-        padding: 15px;
-        margin: auto;
-        width: 500px;
-      }
-      a {
-        text-decoration: none;
-        color: var(--grey);
-      }
-      .btn { 
-         color: white;
-        margin-top: 40px;
-      }
-      .btn-1, .btn-2 {
-        border-radius: 50px;
-        padding: 12px;
-        color: white;
-        margin: 0 10px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-          0 6px 20px 0 rgba(0, 0, 0, 0.2);
-      }
+    <!-- <link rel="stylesheet" href="style.css"> -->
 
-      .btn-1 {
-        background-color: var(--Cyan);
-      }
-      .btn-2 {
-        background-color: var(--Blue);
-      }
-      .snippets {
-        /* background: url(images/bg-header-desktop.png) no-repeat fixed right top; */
-        padding-top: 200px;
-        /* height: 50vh; */
-        text-align: center;
-        font-size: 20px;
-      }
-      .left {
-        display: flex;
-      }
-      .snippets .image {
-        display: block;
-        height: auto;
-        width: 105%;
-        transform: translateX(-5%);
-      }
-      .right {
-        padding: 35px;
-        width: initial; 
-        display: block;
-        text-align: center;
-        text-align: center;
+   </head>
+   <style>
+    * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+   }
+   :root {
+     --Cyan: hsl(171, 66%, 44%);
+     --Blue: hsl(233, 100%, 69%);
+     --grey: hsl(210, 10%, 33%);
+     --black: hsl(201, 11%, 6%);
+   }
+   body {
+     font-size: 15px;
+   }
+   header {
+     background: url(images/bg-header-desktop.png) no-repeat fixed right top;
+     padding-top: 100px;
+     /* height: 90vh; */
+     text-align: center;
+   }
+   .logo {
+     padding: 15px;
+   }
+   .content h1 {
+     padding: 15px;
+     width: 600px;
+     margin: auto;
+   }
+   .content >p {
+     padding: 15px;
+     margin: auto;
+     width: 500px;
+   }
+   a {
+     text-decoration: none;
+     color: var(--grey);
+   }
+   .btn { 
+      color: white;
+     margin-top: 40px;
+   }
+   .btn-1, .btn-2 {
+     border-radius: 50px;
+     padding: 12px;
+     color: white;
+     margin: 0 10px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+       0 6px 20px 0 rgba(0, 0, 0, 0.2);
+   }
 
-      }
-      .right h1{
-        color: var(--black);
-        padding: 25px;
-        font-size: 30px;
-      }
-      .right >p{
-        color: var(--grey);
-        padding: 18px;
-        font-size: 25px;
-      }
-      .group {
-        /* float: right; */
-         width: 40vw;
-    
+   .btn-1 {
+     background-color: var(--Cyan);
+   }
+   .btn-2 {
+     background-color: var(--Blue);
+   }
+   .snippets {
+     /* background: url(images/bg-header-desktop.png) no-repeat fixed right top; */
+     padding-top: 300px;
+     /* height: 50vh; */
+     text-align: center;
+     font-size: 20px;
+   }
+   .left {
+     display: flex;
+   }
+   .snippets .image {
+     display: block;
+     height: auto;
+     width: 75%;
+     height: 55%;
+     display: flex;
+     float: left;
+   }
+   .right {
+     padding: 35px;
+     width: initial; 
+     display: block;
+     text-align: center;
+     text-align: center;
 
-      }
-      .card {
-        padding: 40px;
-
-      }
-      .card h3{
-        padding: initial;
-      }
-     .access {
-        padding-top: 100px;
-        /* height: 90vh; */
-        text-align: center;
-      } 
-      .simple h1{
-        color: var(--black);
-        padding: 12px;
-        font-size: 30px;
-
-
-      }
-      .simple >p{
-        color: var(--grey);
-        padding: 12px;
-        font-size: 20px;
-      }
-      .snippets h3 {
-        columns: var(--grey);
-
-      }
-      .access {
-        padding-top: 100px;
-        /* height: 90vh; */
-        text-align: center;
-        font-size: 20px;
-      }
-     .access .simple {
-        padding-top: 58px;
-        display: contents;
-        margin-top: 32px;
-
-      } 
-      .image-box {
-      padding: 25px;
-      }
-     
-      .tools {
-        padding-top: 100px;
-        text-align: center;
-        /* font-size: 20px; */
-      }
-      .tools h3{
-        padding: 35px;
-      }
-      .tools-inner {
-        padding: 32px;
-        } 
-        .tools-inner h3{
-        color: var(--black);
-        font-size: 30px;
-        } 
-        .tools-inner >p{
-        color: var(--grey);
-        font-size: 18px;
-        } 
-        
-
-      .create{
-        padding: 32px;
-        display: flex;
-        gap: 3px; 
-
-      }
-
-      .create-inner h3{
-        color: var(--black);
-        font-size: 30px;
-        
-
-      }
-      .create-inner >p{
-        color: var(--grey);
-        font-size: 25px;
-  
-  
-
-      }
-      .svg {
-        padding-top: 100px;
-        text-align: center;
-        font-size: 20px;
-      }
-      .svg-inner{
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       padding: 45px;
-       gap: 8rem;
-
-      }
-      .free{
-        padding-top: 200px;
-        text-align: center;
-        font-size: 20px;
-
-      }
-      .free-inner h1 {
-        color: var(--black);
-        font-size:35px;
-        padding: 15px;
-        width: 600px;
-        margin: auto;
-      }
-      .free-inner >p {
-        color: var(--grey);
-        font-size: 18px;
-        padding: 15px;
-        margin: auto;
-        width: 600px;
-      }
-    
-      .small {
-        float: left;
-
-       /* justify-content: center; */
-       align-content: center;
-      
-  
-      }
-      /* .privacy {
-        flex-wrap: wrap;
-        width: 60%;
-      } */
-  
-      .small-inner {
-         display: flex;
-         margin: auto;
-         padding: 40px;
-        font-weight: bolder;
-        gap: 3rem;
-        flex-wrap: wrap;
-        width: 50%;
-        
-      }
-      .social {
-        padding-top: 100px;
-        text-align: center;
-        display: flex;
-        font-size: 30px;
-        float: right ;
-        gap: 2rem;
-         
-
-      }
-  
-
-      
-
-      
-      
-    
-
-
-      
-
-
-
-    
-      
-
-    
-
+   }
+   .right h1{
+     color: var(--black);
+     padding: 3px;
+     font-size: 30px;
+   }
+   .right >p{
+     color: var(--grey);
+     padding: 12px;
+     font-size: 25px;
+   }
+   .group {
+     /* float: right; */
+      width: 40vw;
  
 
+   }
+   .card {
+     padding: 40px;
 
-       
-       
- </style>
-  </head>
+   }
+   .card h3{
+     padding:3px;
+     color: var(--black);
+   }
+   .card >p{
+     padding: 15px;
+     color: var(--grey);
+   }
+  .access {
+     padding-top: 100px;
+     /* height: 90vh; */
+     text-align: center;
+   } 
+   .simple h1{
+     color: var(--black);
+     padding: 12px;
+     font-size: 30px;
+
+
+   }
+   .simple >p{
+     color: var(--grey);
+     padding: 12px;
+     font-size: 20px;
+   }
+   .snippets h3 {
+     columns: var(--grey);
+
+   }
+   .access {
+     padding-top: 100px;
+     /* height: 90vh; */
+     text-align: center;
+     font-size: 20px;
+   }
+  .access .simple {
+     padding-top: 58px;
+     display: contents;
+     margin-top: 32px;
+
+   } 
+   .image-box {
+   padding: 95px;
+   }
+  
+   .tools {
+     padding-top: 100px;
+     text-align: center;
+     /* font-size: 20px; */
+   }
+   .tools h3{
+     padding: 35px;
+   }
+   .tools-inner {
+     padding: 32px;
+     } 
+     .tools-inner h3{
+     color: var(--black);
+     font-size: 30px;
+     } 
+     .tools-inner >p{
+     color: var(--grey);
+     font-size: 18px;
+     } 
+     
+
+   .create{
+     padding: 32px;
+     display: flex;
+     gap: 3px; 
+
+   }
+
+   .create-inner h3{
+     color: var(--black);
+     font-size: 30px;
+     
+
+   }
+   .create-inner >p{
+     color: var(--grey);
+     font-size: 25px;
+
+
+
+   }
+   .svg {
+     padding-top: 100px;
+     text-align: center;
+     font-size: 20px;
+   }
+   .svg-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px;
+    gap: 8rem;
+
+   }
+   .free{
+     padding-top: 200px;
+     text-align: center;
+     font-size: 20px;
+
+   }
+   .free-inner h1 {
+     color: var(--black);
+     font-size:35px;
+     padding: 15px;
+     width: 600px;
+     margin: auto;
+   }
+   .free-inner >p {
+     color: var(--grey);
+     font-size: 18px;
+     padding: 15px;
+     margin: auto;
+     width: 600px;
+   }
+ 
+   
+   .footer {
+   margin-top: 80px;
+
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: rgba(169, 169, 169, 0.267);
+   padding: 20px;
+ }
+
+ .footer-links {
+   display: inline-grid;
+   grid-template-columns: auto auto auto;
+   width: 60vh;
+   padding: 20px;
+   flex-wrap: wrap;
+ }
+ .footer-links .link-items {
+   cursor: pointer;
+   margin: 10px 30px;
+   
+   font-size: 18px;
+   font-weight: 400;
+   width: max-content;
+ }
+ .footer-links .link-items:hover{
+   color: hsl(171, 66%, 44%);
+ }
+
+ .social-icons {
+   display: flex;
+ }
+
+ .social-icons .media {
+   margin: 0px 10px;
+ }
+
+
+</style>
+
   <body>
     <header>
       <div class="logo">
@@ -317,7 +301,7 @@
 
       <div class="left">
         <div class="image">
-          <img src="images/image-computer.png" alt="" />
+          <img src="images/image-computer.png" alt=""  width="65%"/>
         </div>
         <div class="group">
           <div class="card">
@@ -351,7 +335,7 @@
            </p>
            </div>
           <div class="image-box">
-          <img src="images/image-devices.png" alt="">
+          <img src="images/image-devices.png" alt="" width="75%"/>
         </div>
           </section> 
 
@@ -400,25 +384,22 @@
         <a href="" class="btn-2">Download for Mac</a>
       </div>
      </section>
-     <section>
-      <!-- <div class="privacy"> -->
-        <div class="small"> <img src="images/logo.svg" width="50" height="50"></div>
-         <div class="small-inner">  
-              <div>FAQs</div>
-              <div>Contact Us </div>
-              <div>Privacy Policy</div>
-              <div>Press Kit</div>
-            </div>
-            <!-- </div> -->
-        
-          <div class="social">
-            <div class="media"><img src="images/icon-facebook.svg" alt=""></div>
-            <div class="media"><img src="images/icon-twitter.svg" alt=""></div>
-            <div class="media"><img src="images/icon-instagram.svg" alt=""></div>
-          </div>
-
-    
-    </section>
+     <section class="footer">
+      <div class="footer-logo"> <img src="images/logo.svg" width="35" height="35"></div>
+      <div class="footer-links">
+        <div class="link-items">FAQs</div>
+        <div class="link-items">Contact Us </div>
+        <div class="link-items">Privacy Policy</div>
+        <div class="link-items">Install Guide</div>
+        <div class="link-items">Press Kit</div>
+      </div>
+      <div class="social-icons">
+        <div class="media"><img src="images/icon-facebook.svg" alt=""></div>
+        <div class="media"><img src="images/icon-twitter.svg" alt=""></div>
+          <div class="media"><img src="images/icon-instagram.svg" alt=""></div>
+        </div>
+      </section>
+   
   </body>
   </head>
 </html>
